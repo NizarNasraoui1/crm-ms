@@ -1,0 +1,32 @@
+<label for="file-upload" class="custom-file-upload">
+    Upload file
+</label>
+<input id="file-upload" class="uploadFileButton" type="file" (change)="uploadFile($event)">
+
+<div class="card">
+    <p-table [value]="files" styleClass="p-datatable-sm">
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th>File Name</th>
+                <th>Extension</th>
+                <th></th>
+            </tr>
+        </ng-template>
+
+        <ng-template (click)="this.navigateToFile()" pTemplate="body" let-file>
+            <tr>
+                <td>{{file.split('.')[0]}}</td>
+                <td>{{file.split('.')[1]}}</td>
+                <td>
+                    <button (click)="this.onViewFile(file)" [ngStyle]="{'margin-right':'3%','margin-bottom':'2%'}"
+                        pButton pRipple type="button" icon="pi pi-search"
+                        class="p-button-rounded p-button-info p-button-outlined"></button>
+                </td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<ng-template #openFileModal></ng-template>

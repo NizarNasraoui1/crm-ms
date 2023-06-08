@@ -1,0 +1,29 @@
+<p-dialog header="File Viewer" [(visible)]="displaySaveModal" [modal]="true" [style]="{width: '80vw'}" [maximizable]="true" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+
+    <div class="title">
+        <!-- <p>Title:</p><input [placeholder]="this.title" [(ngModel)]="title" [ngStyle]="{'height':'5vh'}" type="text" pInputText /> -->
+    </div>
+    <div *ngIf="isPdf" class="content">
+        <pdf-viewer
+        [src]="path"
+        [rotation]="0"
+        [original-size]="false"
+        [show-all]="true"
+        [fit-to-page]="false"
+        [zoom]="1"
+        [zoom-scale]="'page-width'"
+        [stick-to-page]="false"
+        [render-text]="true"
+        [external-link-target]="'blank'"
+        [autoresize]="true"
+        [show-borders]="false"
+        style="width: 100%; height: 600px;"
+      ></pdf-viewer>
+    </div>
+
+    <img *ngIf="!isPdf" src="{{path}}">
+
+        <ng-template pTemplate="footer">
+        </ng-template>
+</p-dialog>

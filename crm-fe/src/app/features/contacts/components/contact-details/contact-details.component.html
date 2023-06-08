@@ -1,0 +1,39 @@
+<div class="grid">
+	<div class="col-12 md:col-12">
+		<div class="card p-fluid">
+			<h5>Contact Informations</h5>
+			<form [formGroup]="contactForm">
+				<div class="p-formgrid grid">
+					<div class="field col">
+						<label htmlFor="firstName">First Name</label>
+						<input formControlName="firstName" pInputText id="firstName" type="text" />
+					</div>
+					<div class="field col">
+						<label htmlFor="lastName">Last Name</label>
+						<input formControlName="lastName" pInputText id="lastName" type="text" />
+					</div>
+				</div>
+				<div class="p-formgrid grid">
+					<div class="field col">
+						<label htmlFor="address">Address</label>
+						<input formControlName="address" pInputText id="address" type="text" />
+					</div>
+					<div class="field col">
+						<label htmlFor="email">Email</label>
+						<input formControlName="email" pInputText id="email" type="text" />
+					</div>
+				</div>
+				<!-- <div class="p-formgrid grid">
+					<div class="field col">
+						<label htmlFor="name1">Name</label>
+						<input pInputText id="name1" type="text" />
+					</div>
+					<div class="field col">
+						<label htmlFor="email1">Email</label>
+						<input pInputText id="email1" type="text" />
+					</div>
+				</div> -->
+			</form>
+	</div>
+	<p-button (onClick)="onSubmit()" label="Save" type="submit" ></p-button>
+</div>

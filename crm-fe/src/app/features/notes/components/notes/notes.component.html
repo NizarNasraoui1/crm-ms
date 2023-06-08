@@ -1,0 +1,7 @@
+<p-button style="float:right;margin-bottom: 2%;" (click)="onAddNote()" label="Add Note"></p-button><br>
+<div style="clear:both"  *ngFor="let note of noteList">
+    <div>
+        <app-note (noteUpdatedEvent)="onDeletedNote()" (openUpdateNoteEvent)="openUpdateNote($event)" [note]="note"></app-note><br>
+    </div>
+</div>
+<ng-template #saveNoteModal></ng-template>

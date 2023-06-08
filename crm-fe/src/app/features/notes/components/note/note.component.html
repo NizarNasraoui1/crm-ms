@@ -1,0 +1,10 @@
+<p-panel header="{{note.title}}">
+    <ng-template pTemplate="icons">
+    <button pButton class="p-panel-header-icon pi pi pi-refresh" (click)="onUpdate()" >
+    </button>       
+        <button pButton class="p-panel-header-icon pi pi-times" (click)="onDelete()" >
+    </button>  
+       
+    </ng-template>
+    <div [innerHtml]="note.content"></div>
+</p-panel>

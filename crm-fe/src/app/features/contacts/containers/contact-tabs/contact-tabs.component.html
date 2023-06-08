@@ -1,0 +1,21 @@
+<div class="card">
+    <p-tabView>
+      <p-tabPanel header="Details">
+        <p>
+          <app-contact-details (updateContact)="updateContact($event);" [contact]="this.contact" ></app-contact-details>
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Notes">
+        <p>
+          <app-notes (noteListUpdatedEvent)="onNoteUpdated()" [noteList]="noteList" [contactId]="id"></app-notes>
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Files">
+        <p>
+          <app-file-list [crmBaseEntityId]="this.id"></app-file-list>
+        </p>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+
+  

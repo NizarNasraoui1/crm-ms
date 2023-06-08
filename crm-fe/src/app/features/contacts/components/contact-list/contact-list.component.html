@@ -1,0 +1,42 @@
+<div class="searchBar" *ngIf="searchParams">
+
+    <div class="grid p-fluid">
+        <div class="col-12 md:col-10">
+            <app-search-bar (searchForm)="onSearchFormChange($event)" [searchParams]="searchParams"></app-search-bar>
+
+        </div>
+        <div class="col-12 md:col-2 addContact">
+            <p-button [routerLink]="['./add']" label="Add Contact"></p-button>
+
+        </div>
+    </div>
+
+</div>
+<p-table [value]="contacts">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-contact>
+        <tr>
+            <td [routerLink]="['./details/',contact.id]">{{contact.firstName}}</td>
+            <td>{{contact.lastName}}</td>
+            <td>{{contact.address}}</td>
+            <td>{{contact.email}}</td>
+            <td></td>
+            <td>
+                <button [routerLink]="['./details/',contact.id]" [ngStyle]="{'margin-right':'3%','margin-bottom':'2%'}" pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success p-button-outlined"></button>
+                <button (click)="deleteContact(contact.id)" [ngStyle]="{'margin-bottom':'2%'}" pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-outlined"></button>
+            </td>
+
+        </tr>
+    </ng-template>
+</p-table>
+
+<p-paginator (onPageChange)="onPageChange($event)" [rows]="10" [totalRecords]="this.totalRecords" [rowsPerPageOptions]="[5,10,20,30]"></p-paginator>

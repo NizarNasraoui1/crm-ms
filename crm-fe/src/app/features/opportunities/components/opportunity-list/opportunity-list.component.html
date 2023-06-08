@@ -1,0 +1,104 @@
+<p-button (click)="this.onViewSaveModal()" label="Add Opportunity"></p-button>
+<div class="example-container">
+    <mat-card class="stepContainer">
+        <mat-card-content>
+            <h3>First Contact</h3>
+            <div style="height: 50vh;" cdkDropList #firstContact="cdkDropList" [cdkDropListData]="firstContactList"
+            [cdkDropListConnectedTo]="[meetingScheduled,proposals,closed]" class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of firstContactList" cdkDrag>
+                <mat-card style="margin-bottom: 2%;">
+                    <mat-card-content >
+                        <p class="closeButton"  (click)="deleteOpportunity(item)">X</p>
+                        <p style="font-weight: bold;color:rgba(255, 166, 0, 0.589)">Name:</p>
+                        <p> {{item.name}}</p>
+                        <p >
+                            <span style="font-weight: bold;color:rgba(255, 166, 0, 0.589)">Related to:</span>
+                            <span *ngFor="let contact of item.contacts">
+                                <p (click)="navigateToContactDetails(contact.id)">{{contact.firstName}}</p>
+                            </span>
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>
+
+<div class="example-container">
+<mat-card class="stepContainer">
+    <mat-card-content>
+            <h3>Meeting Scheduled</h3>
+            <div style="height: 50vh;" cdkDropList #meetingScheduled ="cdkDropList" [cdkDropListData]="meetingScheduledList"
+                [cdkDropListConnectedTo]="[firstContact,proposals,closed]" class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box"  *ngFor="let item of meetingScheduledList" cdkDrag>
+                    <mat-card style="margin-bottom: 2%;">
+                        <mat-card-content >
+                            <p class="closeButton"  (click)="deleteOpportunity(item)">X</p>
+                            <p><span style="font-weight: bold;color:rgba(255, 166, 0, 0.589)">Name:</span> {{item.name}}</p>
+                            <p >
+                                <span style="font-weight: bold;color:rgba(255, 166, 0, 0.589)">Related to:</span>
+                                <span *ngFor="let contact of item.contacts">
+                                    <p (click)="navigateToContactDetails(contact.id)">{{contact.firstName}}</p>
+                                </span>
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+    </mat-card-content>
+</mat-card>
+</div>
+
+<div class="example-container">
+    <mat-card class="stepContainer">
+        <mat-card-content>
+                <h3>Proposal</h3>
+                <div style="height: 50vh;" cdkDropList #proposals="cdkDropList" [cdkDropListData]="proposalList"
+                    [cdkDropListConnectedTo]="[closed,firstContact,meetingScheduled]" class="example-list" (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let item of proposalList" cdkDrag>
+                        <mat-card style="margin-bottom: 2%;">
+                            <mat-card-content >
+                                <p class="closeButton" (click)="deleteOpportunity(item)">X</p>
+                                <p><span style="font-weight: bold;color:rgba(255, 166, 0, 0.589)">Name:</span> {{item.name}}</p>
+                                <p >
+                                    <span style="font-weight: bold;color:rgba(255, 166, 0, 0.589)">Related to:</span>
+                                    <span *ngFor="let contact of item.contacts">
+                                        <p (click)="navigateToContactDetails(contact.id)">{{contact.firstName}}</p>
+                                    </span>
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+        </mat-card-content>
+    </mat-card>
+    </div>
+
+    <div class="example-container">
+        <mat-card class="stepContainer">
+            <mat-card-content>
+                    <h3>Closed</h3>
+                    <div style="height: 50vh;" cdkDropList #closed="cdkDropList" [cdkDropListData]="closedList"
+                        [cdkDropListConnectedTo]="[proposals,meetingScheduled,firstContact]" class="example-list" (cdkDropListDropped)="drop($event)">
+                        <div class="example-box" *ngFor="let item of closedList" cdkDrag>
+                            <mat-card style="margin-bottom: 2%;">
+                                <mat-card-content >
+                                    <p class="closeButton"  (click)="deleteOpportunity(item)">X</p>
+                                    <p><span style="font-weight: bold;color:rgba(255, 166, 0, 0.589)">Name:</span> {{item.name}}</p>
+                                    <p >
+                                        <span style="font-weight: bold;color:rgba(255, 166, 0, 0.589)">Related to:</span>
+                                        <span *ngFor="let contact of item.contacts">
+                                            <p (click)="navigateToContactDetails(contact.id)">{{contact.firstName}}</p>
+                                        </span>
+                                    </p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+            </mat-card-content>
+        </mat-card>
+        </div>
+
+<app-add-opportunity-modal [displaySaveModal]="viewSaveModal" (saveAndClose)="onSaveAndCloseModal($event)"></app-add-opportunity-modal>

@@ -1,0 +1,29 @@
+<div class="content">
+    <form [formGroup]="searchFormGroup">
+        <div class="grid p-fluid">
+            <div class="col-12 md:col-3">
+                <span class="p-float-label p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <input formControlName="searchWord" type="text" id="inputtext-left" pInputText>
+                    <label for="inputtext-left">Search</label>
+                </span>
+            </div>
+            <div class="col-12 md:col-3">
+                <span class="p-float-label">
+                    <p-multiSelect formControlName="searchFields" inputId="multiselect"
+                        [options]="searchParams.searchFields" optionLabel="label" [filter]="false"></p-multiSelect>
+                    <label for="multiselect">Search Fields</label>
+                </span>
+            </div>
+            <div class="col-12 md:col-3">
+                <p-dropdown formControlName="sortField" placeholder="Sort By" [options]="searchParams.sortFields"
+                    optionLabel="label"></p-dropdown>
+            </div>
+
+            <div class="col-12 md:col-3">
+                <p-dropdown formControlName="sortDirection" placeholder="Sort Direction" [options]="['ASC','DESC']">
+                </p-dropdown>
+            </div>
+        </div>
+    </form>
+</div>
