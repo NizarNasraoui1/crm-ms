@@ -27,7 +27,7 @@ public class OpportunityServiceImpl implements OpportunityService {
     @Override
     @Transactional
     public OpportunityDto saveNewOpportunity(OpportunityDto opportunityDto) {
-        return null;
+        return opportunityMapper.toDto(opportunityRepository.save(opportunityMapper.toBo(opportunityDto)));
     }
 
     @Override

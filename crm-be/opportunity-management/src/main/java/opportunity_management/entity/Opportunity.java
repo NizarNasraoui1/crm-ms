@@ -16,7 +16,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Opportunity extends CrmBaseEntity{
+public class Opportunity{
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
@@ -32,6 +32,9 @@ public class Opportunity extends CrmBaseEntity{
     @Enumerated(EnumType.STRING)
     private OpportunityStageEnum stage;
     private LocalDateTime closeDate;
+
+    @Embedded
+    private ContactInfo contactInfo;
 
 
 
