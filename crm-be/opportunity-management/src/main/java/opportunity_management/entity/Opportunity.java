@@ -10,7 +10,9 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -33,16 +35,8 @@ public class Opportunity{
     private OpportunityStageEnum stage;
     private LocalDateTime closeDate;
 
-    @Embedded
-    private ContactInfo contactInfo;
-
-
-
-
-    //    public Opportunity(Long id, Date createDate, Date modifyDate, List<Note> noteList, String name, OpportunityStageEnum stage, LocalDateTime closeDate) {
-//        super(id, createDate, modifyDate, noteList);
-//        this.name = name;
-//        this.stage = stage;
-//        this.closeDate = closeDate;
-//    }
+    @ElementCollection
+    @CollectionTable(name = "opportunity_contacts", joinColumns = @JoinColumn(name = "opportunity_id"))
+    @Column(name = "contact_id")
+    private List<Long> contactIds = new ArrayList<>();
 }
