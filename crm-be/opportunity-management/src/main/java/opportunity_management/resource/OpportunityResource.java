@@ -27,10 +27,10 @@ public class OpportunityResource {
         return new ResponseEntity<>(opportunityService.getAllOpportunities(),HttpStatus.OK);
     }
 
-    @GetMapping("/stage")
-    public ResponseEntity<List<OpportunityDto>> getAllOpportunitiesByStage(@RequestParam(value = "stage",required = true) OpportunityStageEnum stage){
-        return new ResponseEntity<>(opportunityService.getAllOpportunitiesByStage(stage),HttpStatus.OK);
-    }
+//    @GetMapping("/stage")
+//    public ResponseEntity<List<OpportunityDto>> getAllOpportunitiesByStage(@RequestParam(value = "stage",required = true) OpportunityStageEnum stage){
+//        return new ResponseEntity<>(opportunityService.getAllOpportunitiesByStage(stage),HttpStatus.OK);
+//    }
 
     @GetMapping("/{id}/contacts")
     public ResponseEntity<List<ContactDto>> getOpportunityContacts(@PathVariable("id")Long id){

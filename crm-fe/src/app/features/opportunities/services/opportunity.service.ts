@@ -33,10 +33,12 @@ export class OpportunityService {
             opportunityList.push(opportunity);
         });
         proposalList.forEach((opportunity) => {
+            console.log(proposalList);
             opportunity.stage = OpportunityStageEnum.PROPOSAL;
             opportunityList.push(opportunity);
         });
         closedList.forEach((opportunity) => {
+            console.log(closedList);
             opportunity.stage = OpportunityStageEnum.CLOSED;
             opportunityList.push(opportunity);
         });
@@ -46,12 +48,13 @@ export class OpportunityService {
     saveNewOpportunity(opportunityName:string, selectedContacts:Contact[]):Observable<Opportunity> {
         const opportunity: Opportunity = {};
         opportunity.name = opportunityName;
-        const contactsIds: number[] = [];
+        const contactList: Contact[] = [];
         if(selectedContacts){
             selectedContacts.forEach((contact) => {
-                contactsIds.push(contact.id);
+                const newContact: Contact = new Contact(contact.id);
+                contactList.push(newContact);
             });
-            opportunity.contacts = contactsIds;
+            opportunity.contacts = contactList;
         }
         return this.httpUtil.post(opportunityUrl,opportunity);
     }

@@ -5,7 +5,7 @@ export interface Opportunity{
     id?:number,
     name?:string,
     stage?:OpportunityStageEnum,
-    contacts?:number[];
+    contacts?:Contact[],
     closeDate?:Date
 
 }

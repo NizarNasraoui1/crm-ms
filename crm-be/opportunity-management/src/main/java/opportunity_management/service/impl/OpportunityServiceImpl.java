@@ -1,6 +1,7 @@
 package opportunity_management.service.impl;
 
 import opportunity_management.dto.ContactDto;
+import opportunity_management.dto.ContactsByIdRequest;
 import opportunity_management.dto.OpportunityDto;
 import opportunity_management.entity.Opportunity;
 import opportunity_management.enumeration.OpportunityStageEnum;
@@ -33,8 +34,12 @@ public class OpportunityServiceImpl implements OpportunityService {
     @Transactional
     public OpportunityDto saveNewOpportunity(OpportunityDto opportunityDto) {
         Opportunity opportunity=opportunityMapper.toBo(opportunityDto);
+        if(opportunityDto.getStage()==null){
+            opportunity.setStage(OpportunityStageEnum.FIRST_CONTACT);
+        }
         opportunityDto.getContacts().stream().map(ContactDto::getId).forEach(id->opportunity.getContactIds().add(id));
-        return opportunityMapper.toDto(opportunityRepository.save(opportunity));
+        opportunityRepository.save(opportunity);
+        return opportunityDto;
     }
 
     @Override
@@ -47,7 +52,9 @@ public class OpportunityServiceImpl implements OpportunityService {
                 contactsIdsSet.add(id);
             }
         }
-        List<ContactDto>ContactDtos=contactProxy.getAllContactsIn(new ArrayList<>(contactsIdsSet));
+        ContactsByIdRequest contactsByIdRequest=new ContactsByIdRequest();
+        contactsByIdRequest.setContactIds(new ArrayList<>(contactsIdsSet));
+        List<ContactDto>ContactDtos=contactProxy.getAllContactsIn(contactsByIdRequest);
         Map<Long,ContactDto>contactDtoMap=ContactDtos.stream().collect(Collectors.toMap(ContactDto::getId,e->e));
         for(Opportunity opportunity:opportunities){
             OpportunityDto opportunityDto= opportunityMapper.toDto(opportunity);
@@ -60,11 +67,10 @@ public class OpportunityServiceImpl implements OpportunityService {
         return opportunityDtos;
     }
 
-    @Override
-    public List<OpportunityDto> getAllOpportunitiesByStage(OpportunityStageEnum stage) {
+//    @Override
+//    public List<OpportunityDto> getAllOpportunitiesByStage(OpportunityStageEnum stage) {
 //        return opportunityMapper.toDtos(opportunityRepository.findAllByStage(stage));
-        return null;
-    }
+//    }
 
     @Override
     public List<ContactDto> getOpportunityContacts(Long id) {
@@ -80,12 +86,14 @@ public class OpportunityServiceImpl implements OpportunityService {
 
     @Override
     public OpportunityDto updateOpportunity(Long id,OpportunityDto opportunityDto) {
-//        Opportunity opportunity=opportunityRepository.findById(id).orElseThrow(()->new EntityNotFoundException("opportunity not found"));
-//        opportunity.setName(opportunityDto.getName());
-//        opportunity.setStage(opportunityDto.getStage());
-//        List<Contact>contacts=opportunityDto.getContacts().stream().map((contact)->contactMapper.toBo(contact)).map((contact)->contactRepository.save(contact)).collect(Collectors.toList());
-//        opportunity.setContacts(contacts);
-        return null;
+        Opportunity opportunity=opportunityRepository.findById(id).orElseThrow(()->new EntityNotFoundException("opportunity not found"));
+        opportunity.setName(opportunityDto.getName());
+        opportunity.setStage(opportunityDto.getStage());
+        for(ContactDto contacts:opportunityDto.getContacts()){
+            opportunity.getContactIds().add(contacts.getId());
+        }
+        opportunityRepository.save(opportunity);
+        return opportunityDto;
     }
 
     @Override

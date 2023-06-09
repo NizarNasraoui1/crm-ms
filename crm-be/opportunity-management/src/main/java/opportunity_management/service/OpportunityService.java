@@ -11,7 +11,7 @@ public interface OpportunityService {
 
     List<OpportunityDto>getAllOpportunities();
 
-    List<OpportunityDto> getAllOpportunitiesByStage(OpportunityStageEnum stage);
+//    List<OpportunityDto> getAllOpportunitiesByStage(OpportunityStageEnum stage);
 
     List<ContactDto> getOpportunityContacts(Long id);
 
