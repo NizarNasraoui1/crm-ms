@@ -2,6 +2,7 @@ package opportunity_management.service.impl;
 
 import opportunity_management.Util.PaginationAndFilteringUtil;
 import opportunity_management.dto.ContactDto;
+import opportunity_management.dto.ContactsByIdRequest;
 import opportunity_management.dto.DynamicSearchDto;
 import opportunity_management.dto.ParamDto;
 import opportunity_management.dto.commons.FilteredPageWrapper;
@@ -150,6 +151,10 @@ public class ContactServiceImpl extends CrmBaseEntityServiceImpl implements Cont
         return contactRepository.countContacts();
     }
 
+    @Override
+    public List<ContactDto> findContactsByIds(ContactsByIdRequest contactsByIdRequest) {
+        return contactMapper.toDtos(contactRepository.findAllByIdIn(contactsByIdRequest.getContactIds()));
+    }
 
 
 }

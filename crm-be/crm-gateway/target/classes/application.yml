@@ -21,13 +21,18 @@ spring:
          uri: lb://IDENTITY-SERVICE
          predicates:
            - Path=/auth/**
-       - id: identity-service
+       - id: contact-service
          uri: lb://CONTACT-MANAGEMENT
          predicates:
            - Path=/api/contact-management/**
+       - id: opportunity-service
+         uri: lb://OPPORTUNITY-MANAGEMENT
+         predicates:
+           - Path=/api/opportunity-management/**
+
 
  application:
-   name: SWIGGY-GATEWAY
+   name: CRM-GATEWAY
 
 eureka:
   client:

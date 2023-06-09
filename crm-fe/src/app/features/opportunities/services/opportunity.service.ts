@@ -5,7 +5,7 @@ import { Contact } from '../../contacts/models/contact';
 import { Opportunity } from '../models/opportunity';
 import { OpportunityStageEnum } from '../models/opportunityStageEnum';
 
-const opportunityUrl = 'api/contact-management/opportunity';
+const opportunityUrl = 'api/opportunity-management/opportunity';
 
 @Injectable({
     providedIn: 'root',
@@ -33,12 +33,10 @@ export class OpportunityService {
             opportunityList.push(opportunity);
         });
         proposalList.forEach((opportunity) => {
-            console.log(proposalList);
             opportunity.stage = OpportunityStageEnum.PROPOSAL;
             opportunityList.push(opportunity);
         });
         closedList.forEach((opportunity) => {
-            console.log(closedList);
             opportunity.stage = OpportunityStageEnum.CLOSED;
             opportunityList.push(opportunity);
         });
@@ -48,13 +46,12 @@ export class OpportunityService {
     saveNewOpportunity(opportunityName:string, selectedContacts:Contact[]):Observable<Opportunity> {
         const opportunity: Opportunity = {};
         opportunity.name = opportunityName;
-        const contactList: Contact[] = [];
+        const contactsIds: number[] = [];
         if(selectedContacts){
             selectedContacts.forEach((contact) => {
-                const newContact: Contact = new Contact(contact.id);
-                contactList.push(newContact);
+                contactsIds.push(contact.id);
             });
-            opportunity.contacts = contactList;
+            opportunity.contacts = contactsIds;
         }
         return this.httpUtil.post(opportunityUrl,opportunity);
     }

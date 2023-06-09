@@ -3,6 +3,7 @@ package opportunity_management.resource;
 import opportunity_management.dto.ContactDto;
 import opportunity_management.dto.OpportunityDto;
 import opportunity_management.enumeration.OpportunityStageEnum;
+import opportunity_management.proxy.ContactProxy;
 import opportunity_management.service.OpportunityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,10 +14,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("api/contact-management/opportunity")
+@RequestMapping("api/opportunity-management/opportunity")
 public class OpportunityResource {
     @Autowired
     OpportunityService opportunityService;
+
+    @Autowired
+    ContactProxy contactProxy;
 
     @GetMapping("/all")
     public ResponseEntity<List<OpportunityDto>> getAllOpportunities(){

@@ -1,6 +1,7 @@
 package opportunity_management.resource;
 
 import opportunity_management.dto.ContactDto;
+import opportunity_management.dto.ContactsByIdRequest;
 import opportunity_management.dto.DynamicSearchDto;
 import opportunity_management.dto.commons.FilteredPageWrapper;
 import opportunity_management.dto.commons.SearchConfiguration;
@@ -74,5 +75,10 @@ public class ContactResource extends CrmBaseEntityResource {
     @GetMapping("/dynamic-search")
     public ResponseEntity<List<DynamicSearchDto>> getContactDynamicallyByFirstName(@RequestParam(value = "word-search-param",required = true)String wordSearchParam){
         return new ResponseEntity<>(contactService.findContactDynamically(wordSearchParam),HttpStatus.OK);
+    }
+
+    @PostMapping("/all-in")
+    public ResponseEntity<List<ContactDto>>findAllContactsIn(@RequestBody ContactsByIdRequest contactRequest){
+        return new ResponseEntity<>(contactService.findContactsByIds(contactRequest),HttpStatus.OK);
     }
 }

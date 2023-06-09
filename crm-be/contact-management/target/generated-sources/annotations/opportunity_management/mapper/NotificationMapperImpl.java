@@ -2,17 +2,16 @@ package opportunity_management.mapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.annotation.Generated;
 import opportunity_management.dto.NotificationDto;
 import opportunity_management.entity.Notification;
 import org.springframework.stereotype.Component;
 
-/*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-09T01:43:54+0200",
+    date = "2023-06-09T17:35:13+0200",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.4.1 (Oracle Corporation)"
 )
-*/
 @Component
 public class NotificationMapperImpl implements NotificationMapper {
 

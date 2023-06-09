@@ -1,6 +1,7 @@
 package opportunity_management.service;
 
 import opportunity_management.dto.ContactDto;
+import opportunity_management.dto.ContactsByIdRequest;
 import opportunity_management.dto.DynamicSearchDto;
 import opportunity_management.dto.commons.FilteredPageWrapper;
 import opportunity_management.dto.commons.SearchConfiguration;
@@ -27,6 +28,8 @@ public interface ContactService extends CrmBaseEntityService{
     List<DynamicSearchDto> findContactDynamically(String searchWordParam);
 
     int countContacts();
+
+    List<ContactDto> findContactsByIds(ContactsByIdRequest contactsByIdRequest);
 
     // FilteredPageWrapper<ContactDto> getFilteredPage(String searchWord, SearchFields searchFields, int page, int pageSize, String sortField, String sortDirection);
 

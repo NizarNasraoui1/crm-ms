@@ -11,17 +11,12 @@ import java.util.List;
 
 @NoArgsConstructor
 @Data
-public class OpportunityDto extends CrmBaseEntityDto{
+public class OpportunityDto{
+    private Long id;
+    private Date createDate;
+    private Date modifyDate;
     private String name;
     private OpportunityStageEnum stage;
     private LocalDateTime closeDate;
     private List<ContactDto> contacts =new ArrayList<>();
-
-    public OpportunityDto(Long id, Date createDate, Date modifyDate, List<NoteDto> noteList, String name, OpportunityStageEnum stage, LocalDateTime closeDate, List<ContactDto> contacts) {
-        super(id, createDate, modifyDate, noteList);
-        this.name = name;
-        this.stage = stage;
-        this.closeDate = closeDate;
-        this.contacts = contacts;
-    }
 }
