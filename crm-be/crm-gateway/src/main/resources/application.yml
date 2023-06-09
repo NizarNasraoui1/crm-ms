@@ -28,7 +28,7 @@ spring:
            - Path=/api/contact-management/**
 
  application:
-   name: SWIGGY-GATEWAY
+   name: CRM-GATEWAY
 
 eureka:
   client:

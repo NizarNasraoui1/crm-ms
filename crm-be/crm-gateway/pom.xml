@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.javatechie</groupId>
-	<artifactId>swiggy-gateway</artifactId>
+	<artifactId>crm-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>crm-gateway</name>
 	<description>Demo project for Spring Boot</description>

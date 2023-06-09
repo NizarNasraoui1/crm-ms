@@ -1,15 +1,15 @@
 package opportunity_management.mapper;
 
-import opportunity_management.dto.NotificationDto;
-import opportunity_management.entity.Notification;
 import java.util.ArrayList;
 import java.util.List;
+import opportunity_management.dto.NotificationDto;
+import opportunity_management.entity.Notification;
 import org.springframework.stereotype.Component;
 
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-08T10:05:21+0200",
+    date = "2023-06-09T01:43:54+0200",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.4.1 (Oracle Corporation)"
 )
 */

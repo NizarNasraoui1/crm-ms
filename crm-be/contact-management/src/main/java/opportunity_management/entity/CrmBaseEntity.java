@@ -29,10 +29,4 @@ public class  CrmBaseEntity {
     private List<File> fileList;
     @OneToMany(mappedBy = "crmBaseEntity",cascade = CascadeType.ALL)
     private List<Note>noteList;
-
-
-
-
-
-
 }
