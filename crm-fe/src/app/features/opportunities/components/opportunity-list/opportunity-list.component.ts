@@ -43,7 +43,9 @@ export class OpportunityListComponent implements OnInit {
         event.currentIndex,
       );
     }
-    this.opportunityListSave$=this.opportunityService.updateOpportunities(this.firstContactList,this.meetingScheduledList,this.proposalList,this.closedList).subscribe((res)=>{});
+    this.opportunityListSave$=this.opportunityService
+    .updateOpportunities(this.firstContactList,this.meetingScheduledList,this.proposalList,this.closedList)
+    .subscribe();
   }
 
   getAllOpportunities(){

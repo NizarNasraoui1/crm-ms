@@ -98,15 +98,16 @@ public class OpportunityServiceImpl implements OpportunityService {
 
     @Override
     public List<OpportunityDto> updateOpportunities(List<OpportunityDto> opportunityDtos) {
-//        opportunityDtos.forEach((opportunityDto -> {
-//            Opportunity opportunity=opportunityRepository.findById(opportunityDto.getId()).orElseThrow(()->new EntityNotFoundException("opportunity not found"));
-//            opportunity.setContacts(contactMapper.toBos(opportunityDto.getContacts()));
-//            opportunity.setStage(opportunityDto.getStage());
-//            opportunity.setName(opportunityDto.getName());
-//            opportunity.setCloseDate(opportunityDto.getCloseDate());
-//            opportunityRepository.save(opportunity);
-//        }));
-        return null;
+        List<Opportunity>opportunityList=opportunityRepository.findAllByIdIn(opportunityDtos.stream().map(OpportunityDto::getId).collect(Collectors.toList()));
+        opportunityList.forEach((opportunity -> {
+            OpportunityDto opportunityDto=opportunityDtos.stream().filter(e -> e.getId() == opportunity.getId()).findFirst().get();
+            opportunity.setContactIds(opportunityDto.getContacts().stream().map(ContactDto::getId).collect(Collectors.toList()));
+            opportunity.setStage(opportunityDto.getStage());
+            opportunity.setName(opportunityDto.getName());
+            opportunity.setCloseDate(opportunityDto.getCloseDate());
+        }));
+        opportunityRepository.saveAll(opportunityList);
+        return opportunityMapper.toDtos(opportunityList);
     }
 
     @Override
