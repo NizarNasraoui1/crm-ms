@@ -9,6 +9,7 @@ C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\o
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\CannotDeleteException.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ErrorMessage.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\commons\FilteredPageWrapper.java
+C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ContactsByIdRequest.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\repository\OpportunityRepository.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\AllowedFileTypes.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ParamDto.java

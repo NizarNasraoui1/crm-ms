@@ -25,6 +25,7 @@ opportunity_management\service\impl\NoteServiceImpl.class
 opportunity_management\Util\PaginationAndFilteringUtil.class
 opportunity_management\exception\CannotDeleteException.class
 opportunity_management\entity\Opportunity.class
+opportunity_management\ContactManagementApplication.class
 opportunity_management\dto\GenericEntityDto.class
 opportunity_management\resource\StatisticsResource.class
 opportunity_management\service\NoteService.class
@@ -59,7 +60,6 @@ opportunity_management\service\impl\ContactServiceImpl.class
 opportunity_management\repository\UserRepository.class
 opportunity_management\mapper\ContactMapper.class
 opportunity_management\service\impl\NotificationServiceImpl.class
-opportunity_management\CrmApplication.class
 opportunity_management\resource\NoteResource.class
 opportunity_management\Util\CacheUtil.class
 opportunity_management\entity\File.class
@@ -72,6 +72,7 @@ opportunity_management\exception\SearchFieldNotFoundException.class
 opportunity_management\mapper\NoteMapper.class
 opportunity_management\service\FileUploadService.class
 opportunity_management\dto\ContactDto.class
+opportunity_management\dto\ContactsByIdRequest.class
 opportunity_management\service\impl\StatisticsServiceImpl.class
 opportunity_management\resource\ContactResource.class
 opportunity_management\repository\ContactRepository.class

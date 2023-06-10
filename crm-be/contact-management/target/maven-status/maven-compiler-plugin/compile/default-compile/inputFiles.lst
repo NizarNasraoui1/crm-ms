@@ -1,6 +1,7 @@
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\repository\FileRepository.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\mapper\NotificationMapper.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\mapper\GenericMapper.java
+C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\ContactManagementApplication.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\service\impl\ImportServiceImpl.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\entity\Opportunity.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\service\CrmBaseEntityService.java
@@ -27,6 +28,7 @@ C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\oppor
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\repository\AuthorityRepository.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\resource\StatisticsResource.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\exception\ResourceNotFoundException.java
+C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\dto\ContactsByIdRequest.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\resource\FileUploadResource.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\entity\User.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\repository\UserRepository.java
@@ -57,7 +59,6 @@ C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\oppor
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\repository\NotificationRepository.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\service\impl\NoteServiceImpl.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\exception\AuthorityAlreadyExists.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\CrmApplication.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\resource\OpportunityResource.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\resource\CrmBaseEntityResource.java
 C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\contact-management\src\main\java\opportunity_management\batch\ContactBatchConfig.java
