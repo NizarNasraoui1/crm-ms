@@ -5,7 +5,6 @@ import contact_management.service.NoteService;
 import contact_management.dto.StatisticsDto;
 import contact_management.service.OpportunityService;
 import contact_management.service.StatisticsService;
-import opportunity_management.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
