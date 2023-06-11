@@ -1,37 +1,38 @@
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\NotificationDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\SpecificationUtil.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\mapper\OpportunityMapper.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\RoleAlreadyExistsException.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\entity\Opportunity.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\SearchFieldNotFoundException.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\CacheUtil.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\OpportunityStageEnum.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\CannotDeleteException.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ErrorMessage.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\commons\FilteredPageWrapper.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ContactsByIdRequest.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\repository\OpportunityRepository.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\AllowedFileTypes.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ParamDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ControllerExceptionHundler.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\StatisticsDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\service\OpportunityService.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\NoteDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\AuthorityAlreadyExists.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\OpportunityDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ContactDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\PaginationAndFilteringUtil.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\commons\SearchConfiguration.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\GenericEntityDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\commons\SearchFields.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\DynamicSearchDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\RoleToUserForm.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\CrmBaseEntityDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\service\impl\OpportunityServiceImpl.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\mapper\GenericMapper.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\ContactSortFields.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\proxy\ContactProxy.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\OpportunityManagementApplication.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\resource\OpportunityResource.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\ContactSearchFields.java
-C:\Users\NIZAR\IdeaProjects\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ResourceNotFoundException.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\PaginationAndFilteringUtil.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ContactDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\service\impl\OpportunityServiceImpl.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\OpportunityDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\proxy\ContactProxy.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\commons\SearchConfiguration.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\RoleAlreadyExistsException.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\AuthorityAlreadyExists.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\CannotDeleteException.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\AllowedFileTypes.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\entity\Opportunity.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ControllerExceptionHundler.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\SpecificationUtil.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\resource\OpportunityResource.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\service\OpportunityService.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ParamDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\event\ContactStream.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ResourceNotFoundException.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\commons\FilteredPageWrapper.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ErrorMessage.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\SearchFieldNotFoundException.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\StatisticsDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\mapper\GenericMapper.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\GenericEntityDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\CrmBaseEntityDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\commons\SearchFields.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ContactsByIdRequest.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\OpportunityManagementApplication.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\repository\OpportunityRepository.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\ContactSortFields.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\ContactSearchFields.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\CacheUtil.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\enumeration\OpportunityStageEnum.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\NotificationDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\mapper\OpportunityMapper.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\DynamicSearchDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\RoleToUserForm.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\NoteDto.java

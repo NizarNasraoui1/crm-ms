@@ -1,5 +1,6 @@
 package contact_management.service.impl;
 
+import contact_management.Util.KafkaUtil;
 import contact_management.Util.PaginationAndFilteringUtil;
 import contact_management.dto.ContactsByIdRequest;
 import contact_management.dto.commons.FilteredPageWrapper;
@@ -46,6 +47,9 @@ public class ContactServiceImpl extends CrmBaseEntityServiceImpl implements Cont
     @Autowired
     private ApplicationEventPublisher applicationEventPublisher;
 
+    @Autowired
+    private KafkaUtil kafkaUtil;
+
 
     @Override
     public ContactDto findContactById(Long id) {
@@ -77,6 +81,8 @@ public class ContactServiceImpl extends CrmBaseEntityServiceImpl implements Cont
         contact.getOpportunities().forEach((opportunity -> opportunity.getContacts().remove(contact)));
         contactRepository.deleteById(id);
         contactRepository.countContacts();
+        publishContactDeletedEvent(id);
+
     }
 
 
@@ -154,6 +160,11 @@ public class ContactServiceImpl extends CrmBaseEntityServiceImpl implements Cont
     @Override
     public List<ContactDto> findContactsByIds(ContactsByIdRequest contactsByIdRequest) {
         return contactMapper.toDtos(contactRepository.findAllByIdIn(contactsByIdRequest.getContactIds()));
+    }
+
+    @Override
+    public void publishContactDeletedEvent(Long id) {
+        kafkaUtil.sendMessage("contact-deleted",String.valueOf(id));
     }
 
 

@@ -22,4 +22,6 @@ public interface OpportunityService {
     List<OpportunityDto> updateOpportunities(List<OpportunityDto>opportunityDtos);
 
     int countOpportunities();
+
+    void consumeDeletedContact(Long id);
 }

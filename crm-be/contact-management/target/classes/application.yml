@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: CONTACT-MANAGEMENT
+  cloud:
+    stream:
+      bindings:
+        contactDeleted:
+          destination: contact-deleted
 
 eureka:
   client:

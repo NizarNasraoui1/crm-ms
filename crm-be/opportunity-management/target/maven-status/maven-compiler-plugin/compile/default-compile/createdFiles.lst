@@ -17,6 +17,7 @@ opportunity_management\dto\commons\SearchConfiguration.class
 opportunity_management\mapper\GenericMapper.class
 opportunity_management\mapper\OpportunityMapper.class
 opportunity_management\mapper\OpportunityMapperImpl.class
+opportunity_management\event\ContactStream.class
 opportunity_management\proxy\ContactProxy.class
 opportunity_management\Util\CacheUtil.class
 opportunity_management\Util\PaginationAndFilteringUtil.class

@@ -1,5 +1,6 @@
 package opportunity_management.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import opportunity_management.dto.ContactDto;
 import opportunity_management.dto.ContactsByIdRequest;
 import opportunity_management.dto.OpportunityDto;
@@ -11,6 +12,8 @@ import opportunity_management.repository.OpportunityRepository;
 import opportunity_management.service.OpportunityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +23,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class OpportunityServiceImpl implements OpportunityService {
     @Autowired
     private OpportunityRepository opportunityRepository;
@@ -114,5 +118,10 @@ public class OpportunityServiceImpl implements OpportunityService {
     @Cacheable(value = "countOpportunities")
     public int countOpportunities() {
         return opportunityRepository.countOpportunities();
+    }
+
+    @Override
+    public void consumeDeletedContact(Long id) {
+        log.info(String.valueOf(id));
     }
 }

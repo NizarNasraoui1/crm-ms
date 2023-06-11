@@ -33,4 +33,6 @@ public interface ContactService extends CrmBaseEntityService{
 
     // FilteredPageWrapper<ContactDto> getFilteredPage(String searchWord, SearchFields searchFields, int page, int pageSize, String sortField, String sortDirection);
 
+    void publishContactDeletedEvent(Long id);
+
 }

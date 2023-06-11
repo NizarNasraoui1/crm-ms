@@ -4,7 +4,11 @@ server:
 spring:
   application:
     name: OPPORTUNITY-MANAGEMENT
-
+  cloud:
+    stream:
+      bindings:
+        contactDeleted:
+          destination: contact-deleted
 eureka:
   client:
     service-url:
