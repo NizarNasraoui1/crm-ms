@@ -124,4 +124,10 @@ public class OpportunityServiceImpl implements OpportunityService {
     public void consumeDeletedContact(Long id) {
         log.info(String.valueOf(id));
     }
+
+    @Override
+    @Transactional
+    public void deleteContactFromOpportunities(Long id) {
+        opportunityRepository.deleteContactFromOpportunities(id);
+    }
 }

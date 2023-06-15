@@ -74,6 +74,7 @@ public class ContactResource extends CrmBaseEntityResource {
     }
     @GetMapping("/dynamic-search")
     public ResponseEntity<List<DynamicSearchDto>> getContactDynamicallyByFirstName(@RequestParam(value = "word-search-param",required = true)String wordSearchParam){
+        List<DynamicSearchDto>test=contactService.findContactDynamically(wordSearchParam);
         return new ResponseEntity<>(contactService.findContactDynamically(wordSearchParam),HttpStatus.OK);
     }
 

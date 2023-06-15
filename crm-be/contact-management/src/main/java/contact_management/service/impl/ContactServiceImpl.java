@@ -30,6 +30,7 @@ import org.springframework.transaction.annotation.Transactional;
 import jakarta.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -137,17 +138,18 @@ public class ContactServiceImpl extends CrmBaseEntityServiceImpl implements Cont
         Specification<Contact>contactGlobalSpecification=contactFirstNameSpecification.or(contactFirstLastNameSpecification);
         List<Contact>result=contactRepository.findAll(contactGlobalSpecification);
         return result.stream().map((contact -> {
-            String content;
+            StringJoiner joiner=new StringJoiner(" ");
             if(contact.getFirstName()!=null && contact.getLastName()!=null){
-                content=contact.getFirstName()+" "+contact.getLastName();
+                joiner.add(contact.getFirstName());
+                joiner.add(contact.getLastName());
             }
-            else if (contact.getFirstName()!=null){
-                content=contact.getFirstName()+" "+contact.getLastName();
+            else if (contact.getFirstName()!=null && contact.getLastName()==null){
+                joiner.add(contact.getFirstName());
             }
             else{
-                content=contact.getFirstName()+" "+contact.getLastName();
+                joiner.add(contact.getLastName());
             }
-            return new DynamicSearchDto(contact.getId(),content);
+            return new DynamicSearchDto(contact.getId(),joiner.toString());
         })).collect(Collectors.toList());
     }
 

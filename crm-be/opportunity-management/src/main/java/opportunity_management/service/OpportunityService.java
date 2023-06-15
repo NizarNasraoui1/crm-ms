@@ -24,4 +24,6 @@ public interface OpportunityService {
     int countOpportunities();
 
     void consumeDeletedContact(Long id);
+
+    public void deleteContactFromOpportunities(Long id);
 }
