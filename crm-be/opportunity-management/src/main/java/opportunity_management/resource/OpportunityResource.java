@@ -23,7 +23,6 @@ public class OpportunityResource {
 
     @GetMapping("/all")
     public ResponseEntity<List<OpportunityDto>> getAllOpportunities(){
-        System.out.println("retry");
         return new ResponseEntity<>(opportunityService.getAllOpportunities(),HttpStatus.OK);
     }
 

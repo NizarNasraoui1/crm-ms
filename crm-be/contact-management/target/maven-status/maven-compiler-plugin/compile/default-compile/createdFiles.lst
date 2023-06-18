@@ -1,5 +1,6 @@
 contact_management\dto\commons\SearchConfiguration.class
 contact_management\service\UserService.class
+contact_management\Util\KafkaUtil.class
 contact_management\exception\AuthorityAlreadyExists.class
 contact_management\resource\NotificationResource.class
 contact_management\event\CrmBaseEntityCreatedEvent.class
@@ -29,6 +30,7 @@ contact_management\dto\commons\FilteredPageWrapper.class
 contact_management\service\impl\NoteServiceImpl.class
 contact_management\dto\ContactDto.class
 contact_management\dto\DynamicSearchDto.class
+contact_management\config\KafkaConsumerConfig.class
 contact_management\dto\NotificationDto.class
 contact_management\exception\ErrorMessage.class
 contact_management\dto\commons\SearchFields.class
@@ -46,6 +48,7 @@ contact_management\mapper\OpportunityMapper.class
 contact_management\dto\GenericEntityDto.class
 contact_management\resource\NoteResource.class
 contact_management\repository\ContactRepository.class
+contact_management\config\KafkaProducerConfig.class
 contact_management\repository\UserRepository.class
 contact_management\enumeration\ContactSearchFields.class
 contact_management\dto\RoleToUserForm.class
@@ -57,7 +60,6 @@ contact_management\config\SpringAsyncConfig.class
 contact_management\service\impl\NotificationServiceImpl.class
 contact_management\repository\NotificationRepository.class
 contact_management\service\impl\OpportunityServiceImpl.class
-contact_management\event\ContactStream.class
 contact_management\service\impl\CrmBaseEntityServiceImpl.class
 contact_management\enumeration\ContactSortFields.class
 contact_management\dto\OpportunityDto.class

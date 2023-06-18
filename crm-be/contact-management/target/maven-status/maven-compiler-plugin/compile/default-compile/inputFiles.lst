@@ -41,11 +41,13 @@ C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\j
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\dto\commons\SearchConfiguration.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\resource\NoteResource.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\batch\ContactItemWriter.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\config\KafkaConsumerConfig.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\mapper\OpportunityMapper.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\dto\RoleToUserForm.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\exception\ControllerExceptionHundler.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\exception\RoleAlreadyExistsException.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\repository\NoteRepository.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\config\KafkaProducerConfig.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\dto\ContactsByIdRequest.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\repository\NotificationRepository.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\dto\OpportunityDto.java
@@ -61,8 +63,8 @@ C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\j
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\enumeration\AllowedFileTypes.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\mapper\GenericMapper.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\service\StatisticsService.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\Util\KafkaUtil.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\enumeration\ContactSearchFields.java
-C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\event\ContactStream.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\mapper\CrmBaseEntityMapper.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\dto\DynamicSearchDto.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\contact-management\src\main\java\contact_management\enumeration\ContactSortFields.java
