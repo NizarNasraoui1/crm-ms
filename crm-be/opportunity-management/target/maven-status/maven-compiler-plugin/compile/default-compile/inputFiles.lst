@@ -1,5 +1,6 @@
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\PaginationAndFilteringUtil.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ContactDto.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\KafkaUtil.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\service\impl\OpportunityServiceImpl.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\OpportunityDto.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\proxy\ContactProxy.java
@@ -12,10 +13,13 @@ C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\ma
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ControllerExceptionHundler.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\Util\SpecificationUtil.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\resource\OpportunityResource.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\config\KafkaConsumerConfig.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\service\OpportunityService.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\ParamDto.java
-C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\event\ContactStream.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\event\KafkaConsumer.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ResourceNotFoundException.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\OrderDTO.java
+C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\config\KafkaProducerConfig.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\dto\commons\FilteredPageWrapper.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\ErrorMessage.java
 C:\Users\NIZAR\IdeaProjects\crm-ms 2\crm-ms\crm-be\opportunity-management\src\main\java\opportunity_management\exception\SearchFieldNotFoundException.java

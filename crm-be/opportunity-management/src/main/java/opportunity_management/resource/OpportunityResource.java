@@ -2,7 +2,6 @@ package opportunity_management.resource;
 
 import opportunity_management.dto.ContactDto;
 import opportunity_management.dto.OpportunityDto;
-import opportunity_management.enumeration.OpportunityStageEnum;
 import opportunity_management.proxy.ContactProxy;
 import opportunity_management.service.OpportunityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +23,10 @@ public class OpportunityResource {
 
     @GetMapping("/all")
     public ResponseEntity<List<OpportunityDto>> getAllOpportunities(){
+        System.out.println("retry");
         return new ResponseEntity<>(opportunityService.getAllOpportunities(),HttpStatus.OK);
     }
+
 
 //    @GetMapping("/stage")
 //    public ResponseEntity<List<OpportunityDto>> getAllOpportunitiesByStage(@RequestParam(value = "stage",required = true) OpportunityStageEnum stage){

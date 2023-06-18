@@ -1,5 +1,6 @@
 package opportunity_management.service.impl;
 
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
 import opportunity_management.dto.ContactDto;
 import opportunity_management.dto.ContactsByIdRequest;
@@ -21,6 +22,7 @@ import jakarta.persistence.EntityNotFoundException;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 @Slf4j
@@ -58,7 +60,7 @@ public class OpportunityServiceImpl implements OpportunityService {
         }
         ContactsByIdRequest contactsByIdRequest=new ContactsByIdRequest();
         contactsByIdRequest.setContactIds(new ArrayList<>(contactsIdsSet));
-        List<ContactDto>ContactDtos=contactProxy.getAllContactsIn(contactsByIdRequest);
+        List<ContactDto>ContactDtos=getOpportunitiesContacts(contactsByIdRequest);
         Map<Long,ContactDto>contactDtoMap=ContactDtos.stream().collect(Collectors.toMap(ContactDto::getId,e->e));
         for(Opportunity opportunity:opportunities){
             OpportunityDto opportunityDto= opportunityMapper.toDto(opportunity);
@@ -69,6 +71,13 @@ public class OpportunityServiceImpl implements OpportunityService {
 
 
         return opportunityDtos;
+    }
+    public List<ContactDto> getOpportunitiesContacts(ContactsByIdRequest contactsByIdRequest){
+        return contactProxy.getAllContactsIn(contactsByIdRequest);
+    }
+
+    public List<ContactDto> getDefaultOpportunities(){
+        return Stream.of(new ContactDto()).collect(Collectors.toList());
     }
 
 //    @Override
