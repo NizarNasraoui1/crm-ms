@@ -37,20 +37,20 @@ import java.util.stream.Collectors;
 @Service
 public class ContactServiceImpl extends CrmBaseEntityServiceImpl implements ContactService {
 
-    @Autowired
-    private ContactRepository contactRepository;
+    private final ContactRepository contactRepository;
 
-    @Autowired
-    private CrmBaseEntityRepository crmBaseEntityRepository;
-    @Autowired
-    private ContactMapper contactMapper;
+    private final CrmBaseEntityRepository crmBaseEntityRepository;
+    private final ContactMapper contactMapper;
+    private final ApplicationEventPublisher applicationEventPublisher;
+    private final KafkaUtil kafkaUtil;
 
-    @Autowired
-    private ApplicationEventPublisher applicationEventPublisher;
-
-    @Autowired
-    private KafkaUtil kafkaUtil;
-
+    public ContactServiceImpl(ContactRepository contactRepository, CrmBaseEntityRepository crmBaseEntityRepository, ContactMapper contactMapper, ApplicationEventPublisher applicationEventPublisher, KafkaUtil kafkaUtil) {
+        this.contactRepository = contactRepository;
+        this.crmBaseEntityRepository = crmBaseEntityRepository;
+        this.contactMapper = contactMapper;
+        this.applicationEventPublisher = applicationEventPublisher;
+        this.kafkaUtil = kafkaUtil;
+    }
 
     @Override
     public ContactDto findContactById(Long id) {
@@ -67,12 +67,21 @@ public class ContactServiceImpl extends CrmBaseEntityServiceImpl implements Cont
 
     @Override
     public ContactDto updateContactDetails(Long id, ContactDto contactDto) {
-        Contact updateContact= (Contact) contactRepository.findById(id).orElseThrow(()->new EntityNotFoundException());
-        updateContact.setFirstName(contactDto.getFirstName());
-        updateContact.setLastName(contactDto.getLastName());
-        updateContact.setAddress(contactDto.getAddress());
-        updateContact.setEmail(contactDto.getEmail());
-        return contactMapper.toDto(new Contact());
+        Contact contact= (Contact) contactRepository.findById(id).orElseThrow(()->new EntityNotFoundException());
+        contact.setFirstName(contactDto.getFirstName());
+        contact.setLastName(contactDto.getLastName());
+        contact.setAddress(contactDto.getAddress());
+        contact.setEmail(contactDto.getEmail());
+        return contactMapper.toDto(contact);
+    }
+
+    public Contact updateContact(Long id, ContactDto contactDto){
+        Contact contact= (Contact) contactRepository.findById(id).orElseThrow(()->new EntityNotFoundException());
+        contact.setFirstName(contactDto.getFirstName());
+        contact.setLastName(contactDto.getLastName());
+        contact.setAddress(contactDto.getAddress());
+        contact.setEmail(contactDto.getEmail());
+        return contact;
     }
 
     @Override
