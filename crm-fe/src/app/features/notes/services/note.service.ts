@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Note } from 'src/app/shared/models/Note';
 import { HttpUtilService } from 'src/app/util/service/http-util.service';
 
-const noteUrl="api/note";
-const crmBaseEntityUrl="api/note/crm-base-entity";
+const noteUrl="api/contact-management/note";
+const crmBaseEntityUrl="api/contact-management/note/crm-base-entity";
 
 @Injectable()
 export class NoteService {

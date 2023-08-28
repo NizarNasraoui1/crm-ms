@@ -5,7 +5,7 @@ import { HttpUtilService } from 'src/app/util/service/http-util.service';
 
 
 
-const FileApiUrl="/api/file";
+const FileApiUrl="/api/contact-management/file";
 
 @Injectable({
     providedIn: 'root'
@@ -19,7 +19,7 @@ export class FileService {
   }
 
   uploadFile(file:any,crmBaseEntityId:number):Observable<any>{
-    const url = `/api/file/upload/crm-base-entity/${crmBaseEntityId}`;
+    const url = `/api/contact-management/file/upload/crm-base-entity/${crmBaseEntityId}`;
     const formData = new FormData();
     formData.append('file', file);
     const headers = new HttpHeaders();

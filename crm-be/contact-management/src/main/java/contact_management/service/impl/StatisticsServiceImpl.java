@@ -1,10 +1,7 @@
 package contact_management.service.impl;
 
-import contact_management.service.ContactService;
-import contact_management.service.NoteService;
+import contact_management.service.*;
 import contact_management.dto.StatisticsDto;
-import contact_management.service.OpportunityService;
-import contact_management.service.StatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +9,8 @@ import org.springframework.stereotype.Service;
 public class StatisticsServiceImpl implements StatisticsService {
     @Autowired
     private ContactService contactService;
-//    @Autowired
-//    private FileUploadService fileUploadService;
+    @Autowired
+    private FileUploadService fileUploadService;
     @Autowired
     private NoteService noteService;
     @Autowired
